@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import RegisterForm from "@/components/Forms/RegisterForm";
 import { getUser } from "@/lib/actions/patient.action";
+import "react-datepicker/dist/react-datepicker.css";
+
 const RegistrationPage = async ({ params: { userId } }: SearchParamProps) => {
   const user = await getUser(userId);
   return (

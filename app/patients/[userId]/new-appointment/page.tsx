@@ -1,13 +1,11 @@
-import { PatientForm } from "@/components/Forms/PatientForm";
-
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-export default function Home() {
+const NewAppointment = () => {
   return (
     <div className='flex h-screen max-h-screen'>
       <section className='remove-scrollbar container my-auto'>
-        <div className='sub-container max-w-[860px] flex-1 flex-col py-10'>
+        <div className='sub-container max-w-[860px] flex-1 justify-between'>
           <Image
             src='/assets/icons/logo-full.svg'
             height={1000}
@@ -15,17 +13,21 @@ export default function Home() {
             alt='patient'
             className='mb-12 h-10 w-fit'
           />
-          <PatientForm />
-          <p className='copyright py-12'>© 2024 Appointments</p>
+
+          <p className='justify-items-end text-dark-600 xl:text-left'>
+            © 2024 Appointments
+          </p>
         </div>
       </section>
       <Image
         height={1000}
         width={1000}
-        alt='client'
-        className='side-img max-w-[50%]'
-        src='/assets/images/onboarding-img.png'
+        alt='appointment'
+        className='side-img max-w-[390px] bg-bottom'
+        src='/assets/images/appointment-img.png'
       />
     </div>
   );
-}
+};
+
+export default NewAppointment;
